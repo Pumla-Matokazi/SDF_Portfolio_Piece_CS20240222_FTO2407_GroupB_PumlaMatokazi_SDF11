@@ -1,6 +1,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
     <title>Cache Bank Landing Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,25 +24,70 @@
     <link rel="stylesheet" href="./assets/css/loopple/loopple.css">
 </head>
 
-<body class="null">
-    <div class="container flex flex-col mx-auto">
-        <!-- Main container with navigation and header content -->
+<body class="bg-grey-100 null">
+    <div>
+        <!--Component 1-->
+        <div class="mx-auto bg-white">
+            <!-- Main container with navigation and header content -->
+        <div class="relative flex flex-wrap items-center justify-between w-full shrink-0 ">
+        <div class="px-4">
+        <img class="h-8" src="assets/component-1/navigation/cache-bank-logo.png">
+        </div>
+        <div class="hidden md:flex items-center justify-between text-black gap-12">
+            <a class="text-sm font-bold text-black hover:text-red-700 hover:bg-blue-900 hover:rounded-full transition-all duration-300 px-3 py-2" href="#product">Product</a>
+            <a class="text-sm font-bold text-black hover:text-red-700 hover:bg-blue-900 hover:rounded-full transition-all duration-300 px-3 py-2" href="#features">Features</a>
+            <a class="text-sm font-bold text-black hover:text-red-700 hover:bg-blue-900 hover:rounded-full transition-all duration-300 px-3 py-2" href="#pricing">Get Started</a>
+            <a class="text-sm font-bold text-black hover:text-red-700 hover:bg-blue-900 hover:rounded-full transition-all duration-300 px-3 py-2" href="#contact">Contact</a>
+        </div> 
+        <div class="hidden gap-8 p-4 items-center md:flex">
+        <button class="text-sm font-bold text-black hover:text-red-700 hover:bg-blue-900 hover:rounded-full transition-all duration-300 px-3 py-2">Log In</button>
+        <button class="px-4 py-2 text-sm font-bold text-blue bg-red-700 hover:bg-blue-900 hover:text-red-500 rounded-xl">Sign Up</button>
+        </div> 
+        <button class="md:hidden p-4 hover:bg-red-500" id="mobile-menu-toggle">
+            <svg width="24" height="24">
+                <rect y="5" width="24" height="2" fill="currentColor" />
+                <rect y="11" width="24" height="2" fill="currentColor" />
+                <rect y="17" width="24" height="2" fill="currentColor" />
+            </svg>
+        </button>
+        <div class="absolute md:hidden flex md:flex flex-col items-start justify-center w-full gap-3 overflow-hidden bg-white mx-h-screen top-full px-4 py-8 shadow-main" id="mobile-menu">
+            
+            <a class="text-sm font-semibold text-black hover:text-red-700" href="#product">Product</a>
+            <a class="text-sm font-semibold text-black hover:text-red-700" href="#features">Features</a>
+            <a class="text-sm font-semibold text-black hover:text-red-700" href="#pricing">Get Started</a>
+            <a class="text-sm font-semibold text-black hover:text-red-700" href="#contact">Contact</a>
+            
+            
+            <button class="text-sm font-semibold text-black hover:text-red-700">Log In</button>
+            <button class="px-4 py-2 text-sm font-bold text-blue bg-red-700 hover:bg-blue-900 hover:text-red-500 rounded-xl">Sign Up</button>
+            
+        </div>
+        </div>
+        </div>
+        <!--Component 2-->
+        <div class="w-full" id="product">
+            <!-- Wide full-width container for additional content -->
+        </div>
+        <!--Component 3-->
+        <div class="container mx-auto" id="features">
+            <!-- Centered container for more content -->
+        </div>
+        <!--Compenent 5-->
+        <div class="w-full" id="pricing">
+            <!-- Wide full-width container for additional content -->
+        </div>
+        <!--Component 5-->
+        <div class="w-full" id="company">
+            <!-- Wide full-width container for additional content -->
+        </div>
     </div>
-    <div class="w-full">
-        <!-- Wide full-width container for additional content -->
-    </div>
-    <div class="container mx-auto">
-        <!-- Centered container for more content -->
-    </div>
-    <div class="w-full">
-        <!-- Wide full-width container for additional content -->
-    </div>
-    <div class="w-full">
-        <!-- Wide full-width container for additional content -->
-    </div>
+    <!--Footer-->
     <div class="w-full bg-green-500">
         <!-- Full-width footer container with green background -->
     </div>
+    <script>
+        document.getElementById("mobile-menu-toggle").addEventListener("click", function() {document.getElementById("mobile-menu").classList.toggle("hidden")})
+    </script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/countto.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/leaflet.js"></script>
